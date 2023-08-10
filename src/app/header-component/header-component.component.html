@@ -2,23 +2,36 @@
     <div class="body">
         <div class="left">
             <div class="loop" *ngFor="let left of LeftSide; let index = index" (click)="select_category(index, 'left')">
-                <img *ngIf="left.type == 'image'" [src]="left.name" alt="">
+                <img *ngIf="left.type == 'image'" [class]="left.class" [src]="left.name" alt="">
                 <p *ngIf="left.type == 'text'" [class]="left.class">{{left.name}}</p>
             </div>
 
         </div>
         <div class="center">
             <div class="loop" *ngFor="let center of CenterSide">
-                <img *ngIf="center.type == 'image'" [src]="center.name" alt="">
+                <img *ngIf="center.type == 'image'" [class]="center.class" [src]="center.name" alt="">
                 <p *ngIf="center.type == 'text'" [class]="center.class">{{center.name}}</p>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <img src="assets/svg/search.svg" alt="">
+                </div>
             </div>
         </div>
         <div class="right">
             <div class="loop" *ngFor="let right of RightSide">
-                <img *ngIf="right.type == 'image'" [src]="right.name" alt="">
+
+                <img *ngIf="right.type == 'image'" [class]="right.class" [src]="right.name" alt="" (click)="show_menu()">
                 <p *ngIf="right.type == 'text'" [class]="right.class">{{right.name}}</p>
                 <button *ngIf="right.type == 'button'" [class]="right.class">{{right.name}}</button>
+
             </div>
         </div>
+
+
+    </div>
+    <div class="menu" *ngIf="menu">
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
     </div>
 </div>

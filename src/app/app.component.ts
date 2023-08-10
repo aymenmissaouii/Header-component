@@ -11,26 +11,26 @@ export class AppComponent {
   Left=[
     {
       name:"assets/angular-icon.png",
-      class:"",
+      class:"image",
       type:"image"
     },
     {
-    name:"Home",
+    name:"Dashboard",
     class:"active",
     type:"text"
   },
   {
-    name:"About",
+    name:"Team",
     class:"not-active",
     type:"text"
   },
   {
-    name:"Featured",
+    name:"Projects",
     class:"not-active",
     type:"text"
   },
   {
-    name:"Pricing",
+    name:"Calendar",
     class:"not-active",
     type:"text"
   }
@@ -38,10 +38,16 @@ export class AppComponent {
 
   right = [
     {
-      name:"Login",
-      class:"button",
-      type:"button"
+      name:"assets/svg/notifications.svg",
+      class:"icon",
+      type:"image"
+    },
+    {
+      name:"assets/images/user.jpg",
+      class:"image",
+      type:"image"
     }
+
 
   ];
 
